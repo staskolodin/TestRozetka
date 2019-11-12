@@ -2,12 +2,7 @@ package Rozetka.test.steps.serenity;
 
 import Rozetka.test.pages.DictionaryPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasItem;
 
 public class EndUserSteps {
 
@@ -26,15 +21,15 @@ public class EndUserSteps {
     }
 
     @Step
-    public void choose_phone_with_Gray_color(String args) throws InterruptedException {dictionaryPage.choose_phone_with_Gray_color(args);
+    public void choose_phone_with_Gray_color(String args){dictionaryPage.choose_phone_with_Gray_color(args);
     }
 
     @Step
-    public void change_phone_color_to_Space_Gray(String args) throws InterruptedException {dictionaryPage.change_phone_color(args);
+    public void change_phone_color_to_Space_Gray(String args){dictionaryPage.change_phone_color(args);
     }
 
     @Step
-    public void add_product_to_the_basket() throws InterruptedException {dictionaryPage.add_product_to_the_basket();
+    public void add_product_to_the_basket(){dictionaryPage.add_product_to_the_basket();
     }
 
     @Step
@@ -42,7 +37,3 @@ public class EndUserSteps {
         Assert.assertTrue(dictionaryPage.buttonIsVisibleByText(btn));
     }
 }
-
-
-
-
