@@ -15,30 +15,32 @@ public class DefinitionSteps {
     EndUserSteps user;
 
     @Given("^Open https://rozetka\\.com\\.ua$")
-    public void openHttpsRozetkaComUa() {user.is_the_on_page(); }
+    public void openHttpsRozetkaComUa() {user.IsTheOnPage(); }
 
     @When("^Search for \"([^\"]*)\"$")
-    public void searchFor(String keyword)  {user.search_iphone(keyword); }
+    public void searchFor(String keyword)  {user.SearchIphone(keyword); }
 
-    @And("^Choose \"([^\"]*)\" from dropdown list and go to category page$")
-    public void chooseFromDropdownListAndGoToCategoryPage(String keyword) {user.choose_iPhoneXS(keyword);
-        }
+    @And("^Choose iPhone xs from dropdown list and go to category page$")
+    public void chooseIPhoneXsFromDropdownListAndGoToCategoryPage() {user.ChooseIPhoneXS();
+    }
 
-    @And("^Choose any phone with \"([^\"]*)\" color and go to product page$")
-    public void chooseAnyPhoneWithColorAndGoToProductPage(String args) {user.choose_phone_with_Gray_color(args);
-        }
+    @And("^Choose any phone with Silver color and go to product page$")
+    public void chooseAnyPhoneWithSilverColorAndGoToProductPage() {user.ChoosePhoneWithGrayColor();
+    }
 
-    @And("^Change phone's color to \"([^\"]*)\" color$")
-    public void changePhoneSColorToColor(String args) {user.change_phone_color_to_Space_Gray(args);
+    @And("^Change phone's color to Space Gray color$")
+    public void changePhoneSColorToSpaceGrayColor() {user.ChangePhoneColorToSpaceGray();
     }
 
     @And("^Add product to the basket$")
-    public void addProductToTheBasket() {user.add_product_to_the_basket();}
+    public void addProductToTheBasket() {user.AddProductToTheBasket();}
 
 
     @Then("^Button \"([^\"]*)\" is visible$")
-    public void buttonIsVisible(String btn) throws Throwable {
+    public void buttonIsVisible(String btn) {
         user.buttonIsVisible(btn);
     }
+
+
 
 }
