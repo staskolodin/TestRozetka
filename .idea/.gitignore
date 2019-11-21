@@ -1,18 +1,2 @@
 # Default ignored files
-compiler.xml
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Intellij
-.idea/
-*.iml
-*.iws
-
-# Mac
-.DS_Store
-
-# Maven
-log/
-target/
+/workspace.xml
